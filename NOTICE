@@ -1,0 +1,42 @@
+yue2-mlx
+Copyright 2026 yue2-mlx contributors
+
+This is a reimplementation in Apple MLX. No source files from the projects below
+are included in this repository, and no model weights are included.
+
+Licences differ per component. Read this file before redistributing or before
+using generated audio for anything commercial.
+
+------------------------------------------------------------------------------
+YuE2  --  https://huggingface.co/m-a-p/YuE2-3B
+                   https://huggingface.co/m-a-p/YuE2-Vae
+
+CODE: the YuE2 reference implementation is Apache-2.0. This port's transformer
+and decoder follow that architecture.
+
+WEIGHTS: Creative Commons Attribution-NonCommercial 4.0 International
+(CC BY-NC 4.0). NON-COMMERCIAL. This repository contains no weights. They are
+downloaded at runtime, unmodified, from the YuE2 authors' own repositories
+listed above -- not from any third-party mirror or repack. Attribution requires
+identifying YuE2, the model name, and its source repository. Users are
+responsible for complying with that licence, including for audio generated with
+the weights.
+------------------------------------------------------------------------------
+stable-audio-tools  --  https://github.com/Stability-AI/stable-audio-tools
+Copyright (c) 2023 Stability AI
+MIT License.
+
+The Oobleck audio decoder architecture derives from this project.
+------------------------------------------------------------------------------
+SnakeBeta / BigVGAN
+Copyright (c) 2022 NVIDIA CORPORATION
+MIT License.
+
+The SnakeBeta activation derives from this work.
+------------------------------------------------------------------------------
+Qwen  --  https://github.com/QwenLM
+The autoregressive stage follows the Qwen3 architecture, and the tokenizer uses
+the checkpoint's Qwen tiktoken vocabulary.
+------------------------------------------------------------------------------
+
+Nothing in this file is legal advice.

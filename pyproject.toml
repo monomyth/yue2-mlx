@@ -1,0 +1,38 @@
+[project]
+name = "yue2-mlx"
+version = "0.1.0"
+description = "YuE2 song generation on Apple Silicon via Apple MLX"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+
+dependencies = [
+    "mlx>=0.29",
+    "numpy>=1.26",
+    "huggingface-hub>=0.23",
+    "tiktoken>=0.7",
+]
+
+[project.optional-dependencies]
+# PyTorch and transformers are only needed to run the parity suite against upstream.
+dev = ["torch>=2.2", "transformers>=4.43", "pytest>=8.0"]
+
+[project.scripts]
+yue2-mlx = "yue2_mlx.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["yue2_mlx*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["slow: loads multi-gigabyte checkpoints"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
